@@ -4,7 +4,7 @@ const path = require("path");
 
 const startServer = () => {
   const server = http.createServer(handleRequest);
-  const port = 8080;
+  const port = process.env.PORT || 8080;
 
   server.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
